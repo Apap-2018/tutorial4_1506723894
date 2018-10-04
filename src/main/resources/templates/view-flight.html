@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>View Flight</title>
+</head>
+
+<body>
+<h2>Hello!</h2>
+
+<h3>Detail Flight</h3>
+
+<div>
+    <h3 th:text="'Flight Number : ' + ${flight.flightNumber}"></h3>
+    <h3 th:text="'Origin : ' + ${flight.origin}"></h3>
+    <h3 th:text="'Destination : ' + ${flight.destination}"></h3>
+    <h3 th:text="'Time : ' + ${flight.time}"></h3>
+    <br>
+    <h3>Pilot Identity:</h3>
+    <h3 th:text="'Name : ' + ${flight.getPilot().name}"></h3>
+    <h3 th:text="'License Number : ' + ${flight.getPilot().licenseNumber}"></h3>
+
+</div>
+<td><a th:href="@{/flight/delete/__${flight.flightNumber}__}">Delete Flight</a></td>
+<td><a th:href="@{/flight/update/__${flight.flightNumber}__}">Update Flight</a></td>
+
+</body>
+</html>

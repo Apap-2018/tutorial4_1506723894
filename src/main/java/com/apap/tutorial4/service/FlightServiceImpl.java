@@ -35,11 +35,6 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
-    public void deleteFlightByPilotLicenseNumber(String licenseNumber){
-        flightDb.deleteByPilotLicenseNumber(licenseNumber);
-    }
-
-    @Override
     public void updateFlight(String flightNumber, FlightModel flight){
         FlightModel flightData = flightDb.findByFlightNumber(flightNumber);
         flightData.setOrigin(flight.getOrigin());

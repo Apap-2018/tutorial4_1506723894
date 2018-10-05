@@ -14,7 +14,5 @@ public interface FlightService {
 
     List<FlightModel> getFlightByPilotLicenseNumber(String licenseNumber);
 
-    void deleteFlightByPilotLicenseNumber(String licenseNumber);
-
     void updateFlight(String flightNumber, FlightModel flight);
 }
